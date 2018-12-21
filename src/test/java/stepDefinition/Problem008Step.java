@@ -24,7 +24,7 @@ public class Problem008Step {
 
     @Given("^the input of test is \"([^\"]*)\"$")
     public void theInputOfTestIsStringContent(String stringContent) {
-        System.out.println(stringContent);
+
         StringContent = stringContent;
     }
 
