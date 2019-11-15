@@ -154,6 +154,7 @@
       <workItem from="1545347130927" duration="4801000" />
       <workItem from="1546646989658" duration="580000" />
       <workItem from="1573850797023" duration="243000" />
+      <workItem from="1573851126253" duration="620000" />
     </task>
     <task id="LOCAL-00001" summary="setup correct test runner">
       <created>1545348000580</created>
@@ -226,7 +227,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
