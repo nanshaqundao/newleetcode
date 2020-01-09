@@ -12,16 +12,22 @@ public class ThreeSumClosest {
         if (length == 3) {
             return returnResult;
         }
+
+        int left;
+        int right;
+        int tempSum;
+        int tempDiff;
+        int diff = Math.abs(returnResult - target);
         for (int i = 0; i < length - 2; i++) {
-            int left = i + 1;
-            int right = length - 1;
-            int diff = Math.abs(returnResult - target);
+            left = i + 1;
+            right = length - 1;
+
             while (left < right) {
-                int tempSum = nums[i] + nums[left] + nums[right];
+                tempSum = nums[i] + nums[left] + nums[right];
                 if (tempSum == target) {
                     return target;
                 }
-                int tempDiff = Math.abs(target - tempSum);
+                tempDiff = Math.abs(target - tempSum);
                 if (diff > tempDiff) {
                     returnResult = tempSum;
                     diff = tempDiff;
@@ -32,9 +38,7 @@ public class ThreeSumClosest {
                     right = right - 1;
                 }
             }
-
         }
-
         return returnResult;
     }
 
