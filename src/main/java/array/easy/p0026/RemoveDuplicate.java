@@ -57,4 +57,28 @@ public class RemoveDuplicate {
         IntStream.range(0, d).forEach(x -> nums[x] = list.get(x));
         return d;
     }
+
+    //this uses two pointer, one fast and one slow to do the job
+    public int removeDuplicateQuick(int[] nums) {
+        int length = nums.length;
+
+        if (length < 1) {
+            return length;
+        }
+
+        int slowPointer = 0;
+        int quickPointer = 1;
+
+        while (slowPointer < quickPointer && quickPointer < length) {
+            if (nums[quickPointer] != nums[slowPointer]) {
+                slowPointer = slowPointer + 1;
+                nums[slowPointer] = nums[quickPointer];
+                quickPointer++;
+            } else {
+                quickPointer++;
+            }
+        }
+
+        return slowPointer + 1;
+    }
 }
