@@ -4,15 +4,19 @@ public class NextPermutationDemo {
     public static void main(String[] args) {
         NextPermutation nextPermutation = new NextPermutation();
         int[] nums = {
-                1,2,3
+                2, 3, 1
         };
 
         nextPermutation.nextPermutation(nums);
-        changeIt(nums);
-        System.out.println(nums);
+        print(nums);
+        System.out.println("");
     }
 
-    public static void changeIt(int[] nums){
-        nums[0] = 11;
+    static void print(int[] nums) {
+        for (int i : nums) {
+            System.out.print(i);
+        }
     }
+
+
 }
