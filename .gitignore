@@ -143,3 +143,4 @@ nbdist/
 
 target/
 newleetcode.iml
+/.idea/
