@@ -15,20 +15,33 @@ public class MostWater {
 
     // two pointer
     public int maxArea(int[] height) {
+        // Initial the max value of the water container
         int tempMax = 0;
+        // Initial the last max value of the water container
         int lastMax = 0;
-        int i = 0;
-        int j = height.length - 1;
+        // Initial the index of the left side of the water container
+        int left = 0;
+        // Initial the index of the right side of the water container
+        int right = height.length - 1;
+        // Loop the height array
         for (int index = 0; index < height.length; index++) {
-            if (height[i] > height[j]) {
-                tempMax = (j - i) * height[j];
-                j = j - 1;
+            // Compare the height of the left and right side of the water container
+            // If the height of the left side is bigger than the right side, the right side will move to the left side
+            if (height[left] > height[right]) {
+                // Calculate the current water container's max value
+                tempMax = (right - left) * height[right];
+                // Move the right side to the left side
+                right = right - 1;
             } else {
-                tempMax = (j - i) * height[i];
-                i = i + 1;
+                // Calculate the current water container's max value
+                tempMax = (right - left) * height[left];
+                // Move the left side to the right side
+                left = left + 1;
             }
+            // Compare the current water container's max value and the last water container's max value
             lastMax = Math.max(tempMax, lastMax);
-            if (i == j) {
+            // If the left side and right side meet, the loop will be break
+            if (left == right) {
                 break;
             }
         }

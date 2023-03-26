@@ -145,3 +145,10 @@ nbdist/
 target/
 newleetcode.iml
 /.idea/
+.bloop/bloop.settings.json
+.bloop/newleetcode-test.json
+.bloop/newleetcode.json
+.metals/metals.lock.db
+.metals/metals.log
+.metals/metals.mv.db
+.vscode/settings.json
